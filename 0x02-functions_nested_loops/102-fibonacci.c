@@ -1,28 +1,12 @@
-#include <stdio.h>
+def generate_fibonacci(n):
+    fibonacci_sequence = [1, 2]
+    while len(fibonacci_sequence) < n:
+        next_number = fibonacci_sequence[-1] + fibonacci_sequence[-2]
+        fibonacci_sequence.append(next_number)
+    return fibonacci_sequence
 
-/**
- * main - Prnts the first 52 fibonacci numbers
- * Return: Nothing!
- */
+n = 50
+fibonacci_numbers = generate_fibonacci(n)
+formatted_numbers = ", ".join(map(str, fibonacci_numbers))
 
-int main(void)
-{
-	int i = 0;
-	long j =1, k = 2;
-
-	while (i < 50)
-	{
-		if (i == 0)
-			printf("%d", j);
-		else if (i == 1)
-			printf(", %d", k);
-		else
-	{
-		k += j;
-		printf(", %d", k);
-	}
-		++i;
-	}
-	printf("\n");
-	return (0);
-}
+print(formatted_numbers)
