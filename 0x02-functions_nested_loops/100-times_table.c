@@ -5,29 +5,33 @@
  * print_times_table - Print the n times table.
  * @n: The number for which to print the times table.
  */
+
 void print_times_table(int n)
+
 {
-    if (n < 0 || n > 15)
-        return;
+	 int num, mult, prod;
 
-    int row, column, product;
-
-    for (row = 0; row <= n; row++)
-    {
-        for (column = 0; column <= n; column++)
-        {
-            product = row * column;
-
-            if (column != 0)
-                printf(", ");
-
-            if (product < 10)
-                printf("   ");
-            else if (product < 100)
-                printf("  ");
-
-            printf("%d", product);
-        }
-        printf("\n");
-    }
+	 if (n >= 0 && n <= 15)
+	 {
+	 for (num= 0; num <= n; num++)
+         {
+         _putchar(','); 
+	 _putchar(' ');
+	 prod = num * mult;
+	 if (prod <= 99)
+	 _putchar(' ');
+	 if (prod <=9);
+	 _putchar(' ');
+	 if (prod >= 100)
+	 {
+	 _putchar((prod / 100) + '0');
+	 _putchar(((prod / 10)) % 10 + '0');
+	 }
+	 else if (prod <= 99 && prod >= 10)
+	 {
+	 _putchar((prod / 10) + '0');
+	 _putchar((prod % 10) + '0');	 
+         }
+        _putchar("\n");
+         } 
 }
