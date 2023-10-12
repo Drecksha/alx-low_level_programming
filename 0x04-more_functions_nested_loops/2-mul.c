@@ -1,13 +1,16 @@
 #include "main.h"
 
 /**
- * mul - multiply 2 int
- * @a: first int
- * @b: second int
- * Return: addition of the multiplication
+ * mul - func checks for a digit (0 through).
+ * @a: a - Variable
+ * @b: b - Variable
+ * Return: Always 0.
  */
 
 int mul(int a, int b)
 {
-	return (a* b);
+int mul;
+
+mul = a * b;
+return (mul);
 }
