@@ -4,7 +4,6 @@
  * print_disgonal - func draws a diagonal line on the terminal
  * @n: num of times the character \ should be printed
  */
-
 void print_diagonal(int n)
 {
 	if (n <= 0)
