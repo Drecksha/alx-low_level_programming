@@ -1,25 +1,29 @@
-#include <unistd.h>
+#include "main.h"
 
-int _putchar(char c) {
-    return write(1, &c, 1);
+/**
+ * print square - function print a square
+ * @size: size of square
+ * Description: Can only use _putchar to print . Use '#' to print square.
+ */
+
+void print_square(int size)
+{
+	int x; y;
+
+	y = 0;
+
+	if (size < 1)
+		_putchar('\n');
+
+	while (y < size)
+	{
+		x = 0;
+		while (x < size)
+		{
+			_putchar('#');
+			x++;
+		}
+		_putchar('\n');
+		y++;
+	}
 }
-
-void print_square(int size) {
-    if (size <= 0) {
-        _putchar('\n');
-    } else {
-        int i, j;
-        for (i = 0; i < size; i++) {
-            for (j = 0; j < size; j++) {
-                _putchar('#');
-            }
-            _putchar('\n');
-        }
-    }
-}
-
-int main() {
-    print_square(5);
-    return 0;
-}
-
